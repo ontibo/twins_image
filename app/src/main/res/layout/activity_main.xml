@@ -7,100 +7,883 @@
     android:background="#fff"
     tools:context="com.w3adda.listviewwithkot.MainActivity">
 
-    <GridView
-        android:id="@+id/list_lang"
-        android:layout_width="466dp"
-        android:layout_height="374dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="18dp"
-        android:dividerHeight="1dp"
-        android:gravity="center"
-
-        android:horizontalSpacing="10dp"
-        android:numColumns="4"
-        android:padding="5dp"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp">
-
-    </GridView>
-
-
-    <!--    <ImageView-->
-<!--        android:id="@+id/imageView2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignEnd="@+id/list_lang"-->
-<!--        android:layout_alignBottom="@+id/list_lang"-->
-<!--        android:layout_marginStart="66dp"-->
-<!--        android:layout_marginEnd="-172dp"-->
-<!--        android:layout_marginBottom="18dp"-->
-<!--        android:layout_toEndOf="@+id/list_lang"-->
-<!--        app:srcCompat="@drawable/ic_launcher_background" />-->
+    <!--    CARD 1-->
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/easyFlipViewOne"
-        android:layout_width="201dp"
-        android:layout_height="152dp"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/easyFlipView"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="15dp"
-        app:flipDuration="500"
-        app:flipEnabled="false"
-        app:flipOnTouch="true"
-        >
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="315dp"
+        app:flipDuration="300"
+
+        app:flipOnTouch="true">
 
         <ImageView
-            android:layout_width="156dp"
-            android:layout_height="173dp"
-            android:layout_alignEnd="@+id/list_lang"
-            android:layout_alignBottom="@+id/list_lang"
-            android:layout_gravity="center"
-            android:layout_toEndOf="@+id/list_lang"
-            app:srcCompat="@drawable/card_one" />
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+             />
 
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="match_parent"
-            android:layout_alignEnd="@+id/list_lang"
-            android:layout_alignBottom="@+id/list_lang"
-            android:layout_gravity="center"
-            android:layout_toEndOf="@+id/list_lang"
-            app:srcCompat="@drawable/fortune" />
-
-
+            android:id="@+id/img_front"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 2-->
+    <TextView
+        android:id="@+id/tv_number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView2"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="315dp"
+        android:layout_toEndOf="@+id/easyFlipView"
+        android:layout_toRightOf="@+id/easyFlipView"
+        app:flipDuration="300"
+
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back2"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+            />
+        <ImageView
+            android:id="@+id/img_front2"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 3-->
+    <TextView
+        android:id="@+id/tv_number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView3"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="315dp"
+        android:layout_toEndOf="@+id/easyFlipView2"
+        android:layout_toRightOf="@+id/easyFlipView2"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back3"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front3"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 4-->
+    <TextView
+        android:id="@+id/tv_number4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView4"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="315dp"
+        android:layout_toEndOf="@+id/easyFlipView3"
+        android:layout_toRightOf="@+id/easyFlipView3"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back4"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front4"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 5-->
+    <TextView
+        android:id="@+id/tv_number5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView5"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="315dp"
+        android:layout_toEndOf="@+id/easyFlipView4"
+        android:layout_toRightOf="@+id/easyFlipView4"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back5"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front5"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 6-->
+    <TextView
+        android:id="@+id/tv_number6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView6"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="230dp"
+        android:layout_toEndOf="@+id/easyFlipView5"
+        android:layout_toRightOf="@+id/easyFlipView5"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back6"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/img_front6"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            
+            app:srcCompat="@drawable/card_one" />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 7-->
+    <TextView
+        android:id="@+id/tv_number7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView7"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="230dp"
+        android:layout_toEndOf="@+id/easyFlipView6"
+        android:layout_toRightOf="@+id/easyFlipView6"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back7"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front7"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 8-->
+    <TextView
+        android:id="@+id/tv_number8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView8"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="230dp"
+        android:layout_toEndOf="@+id/easyFlipView7"
+        android:layout_toRightOf="@+id/easyFlipView7"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back8"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front8"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 9-->
+    <TextView
+        android:id="@+id/tv_number9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView9"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="230dp"
+        android:layout_toEndOf="@+id/easyFlipView8"
+        android:layout_toRightOf="@+id/easyFlipView8"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back9"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front9"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 10-->
+    <TextView
+        android:id="@+id/tv_number10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView10"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="230dp"
+        android:layout_toEndOf="@+id/easyFlipView9"
+        android:layout_toRightOf="@+id/easyFlipView9"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back10"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front10"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 11-->
+    <TextView
+        android:id="@+id/tv_number11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView11"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="145dp"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back11"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/img_front11"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            
+            app:srcCompat="@drawable/card_one" />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 12-->
+    <TextView
+        android:id="@+id/tv_number12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView12"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="145dp"
+        android:layout_toEndOf="@+id/easyFlipView11"
+        android:layout_toRightOf="@+id/easyFlipView11"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back12"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front12"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 13-->
+    <TextView
+        android:id="@+id/tv_number13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView13"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="145dp"
+        android:layout_toEndOf="@+id/easyFlipView12"
+        android:layout_toRightOf="@+id/easyFlipView12"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back13"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front13"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 14-->
+    <TextView
+        android:id="@+id/tv_number14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView14"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="145dp"
+        android:layout_toEndOf="@+id/easyFlipView8"
+        android:layout_toRightOf="@+id/easyFlipView8"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back14"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front14"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 15-->
+    <TextView
+        android:id="@+id/tv_number15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView15"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="145dp"
+        android:layout_toEndOf="@+id/easyFlipView14"
+        android:layout_toRightOf="@+id/easyFlipView14"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back15"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front15"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 16-->
+    <TextView
+        android:id="@+id/tv_number16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView16"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginBottom="60dp"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back16"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/img_front16"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            
+            app:srcCompat="@drawable/card_one" />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 17-->
+    <TextView
+        android:id="@+id/tv_number17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView17"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toEndOf="@+id/easyFlipView16"
+        android:layout_toRightOf="@+id/easyFlipView16"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back17"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front17"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 18-->
+    <TextView
+        android:id="@+id/tv_number18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView18"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toEndOf="@+id/easyFlipView17"
+        android:layout_toRightOf="@+id/easyFlipView17"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back18"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front18"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 19-->
+    <TextView
+        android:id="@+id/tv_number19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView19"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toEndOf="@+id/easyFlipView18"
+        android:layout_toRightOf="@+id/easyFlipView18"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back19"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front19"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    <!--    CARD 20-->
+    <TextView
+        android:id="@+id/tv_number20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|top"
+        android:textSize="18sp"
+        />
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/easyFlipView20"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toEndOf="@+id/easyFlipView19"
+        android:layout_toRightOf="@+id/easyFlipView19"
+        app:flipDuration="300"
+        app:flipEnabled="true"
+        app:flipOnTouch="true">
+
+        <ImageView
+            android:id="@+id/img_back20"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+
+            />
+        <ImageView
+            android:id="@+id/img_front20"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/card_one"
+            
+            />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
 
     <Button
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="21dp"
-        android:layout_toEndOf="@+id/list_lang"
+        android:layout_marginStart="537dp"
+        android:layout_marginLeft="537dp"
+        android:layout_marginTop="32dp"
         android:text="START" />
 
     <Button
         android:id="@+id/button_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="244dp"
-        android:layout_toEndOf="@+id/list_lang"
+        android:layout_marginStart="539dp"
+        android:layout_marginLeft="539dp"
+        android:layout_marginBottom="255dp"
         android:text="STOP" />
 
     <TextView
         android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="102dp"
-        android:layout_marginBottom="161dp"
-        android:layout_toEndOf="@+id/list_lang"
+        android:layout_marginStart="557dp"
+        android:layout_marginLeft="557dp"
+        android:layout_marginBottom="178dp"
         android:inputType="number"
         android:text="0"
         android:textSize="50dp" />
