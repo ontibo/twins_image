@@ -12,13 +12,13 @@ class Leaderboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val sharedPref: SharedPreferences = getSharedPreferences("BEST_TIME", PRIVATE_MODE)
+        val sharedPref: SharedPreferences = getSharedPreferences(Constants.BEST_TIME, PRIVATE_MODE)
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.leaderboard)
 
-        easy_mode_score.text = sharedPref.getString("EASY_MODE","00:40")
-        medium_mode_score.text = sharedPref.getString("MEDIUM_MODE","00:30")
-        hard_mode_score.text = sharedPref.getString("HARD","00:20")
+        easy_mode_score.text = sharedPref.getString(Constants.BEST_HIGH_EASY_MODE,"00:40")
+        medium_mode_score.text = sharedPref.getString(Constants.BEST_HIGH_MEDIUM_MODE,"00:30")
+        hard_mode_score.text = sharedPref.getString(Constants.BEST_HIGH_HARD_MODE,"00:20")
 
     }
 }
