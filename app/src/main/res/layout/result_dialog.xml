@@ -6,34 +6,43 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/status"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="40dp"
-        android:textSize="40dp"
+        android:id="@+id/newhigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bright_crush"
+        android:textAlignment="center"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/newhigh"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/bright_crush"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/status"
-        tools:layout_editor_absoluteY="162dp" />
+        app:layout_constraintTop_toTopOf="@+id/newhigh" />
 
     <TextView
         android:id="@+id/time"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bright_crush"
+        android:textAlignment="center"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/newhigh" />
+        app:layout_constraintTop_toBottomOf="@+id/status" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

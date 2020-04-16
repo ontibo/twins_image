@@ -35,7 +35,7 @@ public final class Constants {
     public static final int CLICK_FIRST = -1;
 
     // MESSAGE ALERT
-    public static final String MESSAGE_WIN = "CONGRATULATION! YOU WIN";
+    public static final String MESSAGE_WIN = "CONGRATULATION!\n YOU WIN";
     public static final String MESSAGE_LOSE = "GAME OVER!";
 
     // BUTTON
@@ -44,12 +44,13 @@ public final class Constants {
 
 
     public static final int LEVEL_EASY = 0;
-    public static final int LEVEL_HARD = 1;
+    public static final int LEVEL_MEDIUM = 1;
+    public static final int LEVEL_HARD = 2;
 
     // TIME PLAY
-    public static final long EASY_TIME = 22000;
-    public static final long MEDIUM_TIME = 32000;
-    public static final long HARD_TIME = 10000;
+    public static final long EASY_TIME = 30000;
+    public static final long MEDIUM_TIME = 45000;
+    public static final long HARD_TIME = 60000;
     public static final long TIMER_INTERVAL = 1000;
 
 }

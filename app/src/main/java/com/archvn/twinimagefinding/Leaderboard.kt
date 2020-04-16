@@ -16,9 +16,16 @@ class Leaderboard : AppCompatActivity() {
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.leaderboard)
 
-        easy_mode_score.text = "00:"+ sharedPref.getInt(Constants.BEST_HIGH_EASY_MODE,20).toString()
-        medium_mode_score.text = "00:"+ sharedPref.getInt(Constants.BEST_HIGH_MEDIUM_MODE,45).toString()
-        hard_mode_score.text = "00:"+ sharedPref.getInt(Constants.BEST_HIGH_HARD_MODE,60).toString()
+        easy_mode_score.text = formatTime(sharedPref.getInt(Constants.BEST_HIGH_EASY_MODE,30))
+        medium_mode_score.text = formatTime(sharedPref.getInt(Constants.BEST_HIGH_MEDIUM_MODE,45))
+        hard_mode_score.text = formatTime(sharedPref.getInt(Constants.BEST_HIGH_HARD_MODE,60))
 
+    }
+
+    private fun formatTime(millis: Int): String {
+        val minutes = millis / 60
+        val seconds = millis % 60
+
+        return String.format("%02d", minutes) + ":" + String.format("%02d", seconds);
     }
 }

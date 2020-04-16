@@ -51,7 +51,7 @@ class HardMode : AppCompatActivity() {
     var cardNumber: Int = Constants.CARD_NUMBER_ONE
     var turn: Int = 0
     var higtScore: String = Constants.STR_BLANK
-
+    var b : Bundle? = null
 
     private var isPaused = false
     private var isCancelled = false
@@ -61,6 +61,7 @@ class HardMode : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
         setContentView(R.layout.hard_mode)
+        b!!.putInt("level", Constants.LEVEL_HARD)
 
         shuffle(CARDS, Constants.HARD_NO_OF_CARDS)
         shuffle(CARDS, Constants.HARD_NO_OF_CARDS) // double shuffle
@@ -346,7 +347,6 @@ class HardMode : AppCompatActivity() {
         val alertDialog = builder.create()
         alertDialog.show()
     }
-
 
     fun processLockCard (easyFlipView: EasyFlipView, mageView_front : ImageView, mageView_back : ImageView,
                          flipTheView: Boolean, isEnabled : Boolean, flipEnabled: Boolean) {

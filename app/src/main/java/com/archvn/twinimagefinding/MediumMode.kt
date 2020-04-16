@@ -41,9 +41,7 @@ class MediumMode : AppCompatActivity() {
     var clickSecond: Int = Constants.CLICK_FIRST
     var cardNumber: Int = Constants.CARD_NUMBER_ONE
     var turn: Int = 0
-
-
-
+    var b: Bundle? = null
 
     private var isPaused = false
     private var isCancelled = false
@@ -53,6 +51,7 @@ class MediumMode : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
         setContentView(R.layout.medium_mode)
+        b!!.putInt("level", Constants.LEVEL_MEDIUM)
 
         shuffle(CARDS, Constants.MEDIUM_NO_OF_CARDS)
         shuffle(CARDS, Constants.MEDIUM_NO_OF_CARDS) // double shuffle

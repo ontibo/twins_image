@@ -4,6 +4,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.main_menu.*
 
@@ -50,8 +52,22 @@ class Home : AppCompatActivity()  {
         btn_leaderboard.setOnClickListener {
             val intent: Intent = Intent(this@Home, Leaderboard::class.java)
             startActivity(intent)
-            val sharedPref : SharedPreferences ?= null
         }
+    }
 
+    override fun onBackPressed() {
+        val exit = AlertDialog.Builder(this)
+        exit.setTitle("Do you really want to go?")
+        exit.setPositiveButton("Yes, please.")
+            { dialog, which -> finish() }
+        exit.setNegativeButton("No, I can stay.")
+           { dialog, which ->
+                Toast.makeText(
+                    this@Home,
+                    "Welcome back!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        exit.show()
     }
 }

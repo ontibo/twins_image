@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffc"
-    tools:context=".MainActivity">
+    tools:context=".MediumMode">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/row1"
@@ -79,8 +79,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -91,15 +91,15 @@
 
         <ImageView
             android:id="@+id/img_back"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -120,8 +120,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -132,15 +132,15 @@
 
         <ImageView
             android:id="@+id/img_back2"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             />
 
         <ImageView
             android:id="@+id/img_front2"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -161,8 +161,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -173,15 +173,15 @@
 
         <ImageView
             android:id="@+id/img_back3"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -202,8 +202,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView4"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -214,15 +214,15 @@
 
         <ImageView
             android:id="@+id/img_back4"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front4"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -243,8 +243,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView5"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -256,15 +256,15 @@
 
         <ImageView
             android:id="@+id/img_back5"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front5"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -285,8 +285,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView6"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -297,15 +297,15 @@
 
         <ImageView
             android:id="@+id/img_back6"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front6"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -326,8 +326,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView7"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -338,15 +338,15 @@
 
         <ImageView
             android:id="@+id/img_back7"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front7"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -367,8 +367,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView8"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -379,15 +379,15 @@
 
         <ImageView
             android:id="@+id/img_back8"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front8"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -408,8 +408,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView9"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -420,15 +420,15 @@
 
         <ImageView
             android:id="@+id/img_back9"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front9"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one"/>
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -449,8 +449,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView10"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -461,15 +461,15 @@
 
         <ImageView
             android:id="@+id/img_back10"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front10"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -490,8 +490,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView11"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -502,15 +502,15 @@
 
         <ImageView
             android:id="@+id/img_back11"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front11"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -531,8 +531,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView12"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -543,15 +543,15 @@
 
         <ImageView
             android:id="@+id/img_back12"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front12"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -572,8 +572,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView13"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -585,15 +585,15 @@
 
         <ImageView
             android:id="@+id/img_back13"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front13"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -614,8 +614,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView14"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -626,15 +626,15 @@
 
         <ImageView
             android:id="@+id/img_back14"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front14"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -655,8 +655,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView15"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -667,15 +667,15 @@
 
         <ImageView
             android:id="@+id/img_back15"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front15"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
@@ -695,8 +695,8 @@
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView16"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:flipDuration="300"
         app:flipEnabled="true"
         app:flipOnTouch="true"
@@ -707,15 +707,15 @@
 
         <ImageView
             android:id="@+id/img_back16"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"/>
 
         <ImageView
             android:id="@+id/img_front16"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
