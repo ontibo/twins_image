@@ -42,19 +42,18 @@ class EasyMode : AppCompatActivity() {
     var clickSecond: Int = Constants.CLICK_FIRST
     var cardNumber: Int = Constants.CARD_NUMBER_ONE
     var turn: Int = 0
-    var higtScore: String = Constants.STR_BLANK
     var RemainingTime: Long = 0
     var b: Bundle? = null
 
 
     private var isPaused = false
     private var isCancelled = false
-    private var resumeFromMillis: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
         setContentView(R.layout.easy_mode)
+        b = Bundle()
         b!!.putInt("level", Constants.LEVEL_EASY)
 
         shuffle(CARDS, Constants.EASY_NO_OF_CARDS)
@@ -100,96 +99,96 @@ class EasyMode : AppCompatActivity() {
 
         /* CARD 1 */
         val img_view_front: ImageView = findViewById<ImageView>(R.id.img_front)
-        img_view_front.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number)
+        img_view_front.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number)
 
             doStuff(1, strPosition.getText().toString())
         }
 
         /* CARD 2 */
         val img_view_front2: ImageView = findViewById<ImageView>(R.id.img_front2)
-        img_view_front2.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number2)
+        img_view_front2.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number2)
 
             doStuff(2, strPosition.getText().toString())
         }
 
         /* CARD 3 */
         val img_view_front3: ImageView = findViewById<ImageView>(R.id.img_front3)
-        img_view_front3.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number3)
+        img_view_front3.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number3)
 
             doStuff(3, strPosition.getText().toString())
         }
 
         /* CARD 4 */
         val img_view_front4: ImageView = findViewById<ImageView>(R.id.img_front4)
-        img_view_front4.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number4)
+        img_view_front4.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number4)
 
             doStuff(4, strPosition.getText().toString())
         }
 
         /* CARD 5 */
         val img_view_front5: ImageView = findViewById<ImageView>(R.id.img_front5)
-        img_view_front5.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number5)
+        img_view_front5.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number5)
 
             doStuff(5, strPosition.getText().toString())
         }
 
         /* CARD 6 */
         val img_view_front6: ImageView = findViewById<ImageView>(R.id.img_front6)
-        img_view_front6.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number6)
+        img_view_front6.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number6)
 
             doStuff(6, strPosition.getText().toString())
         }
 
         /* CARD 7 */
         val img_view_front7: ImageView = findViewById<ImageView>(R.id.img_front7)
-        img_view_front7.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number7)
+        img_view_front7.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number7)
 
             doStuff(7, strPosition.getText().toString())
         }
 
         /* CARD 8 */
         val img_view_front8: ImageView = findViewById<ImageView>(R.id.img_front8)
-        img_view_front8.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number8)
+        img_view_front8.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number8)
 
             doStuff(8, strPosition.getText().toString())
         }
 
         /* CARD 9 */
         val img_view_front9: ImageView = findViewById<ImageView>(R.id.img_front9)
-        img_view_front9.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number9)
+        img_view_front9.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number9)
 
             doStuff(9, strPosition.getText().toString())
         }
 
         /* CARD 10 */
         val img_view_front10: ImageView = findViewById<ImageView>(R.id.img_front10)
-        img_view_front10.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number10)
+        img_view_front10.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number10)
 
             doStuff(10, strPosition.getText().toString())
         }
 
         /* CARD 11 */
         val img_view_front11: ImageView = findViewById<ImageView>(R.id.img_front11)
-        img_view_front11.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number11)
+        img_view_front11.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number11)
 
             doStuff(11, strPosition.getText().toString())
         }
 
         /* CARD 12 */
         val img_view_front12: ImageView = findViewById<ImageView>(R.id.img_front12)
-        img_view_front12.setOnClickListener {
-            var strPosition: TextView = findViewById<TextView>(R.id.tv_number12)
+        img_view_front12.setOnClickListener{
+            var strPosition:TextView = findViewById<TextView>(R.id.tv_number12)
 
             doStuff(12, strPosition.getText().toString())
         }
@@ -319,46 +318,47 @@ class EasyMode : AppCompatActivity() {
             clickFirst = posCard                    // Set vi tri card dau tien
             cardNumber = Constants.CARD_NUMBER_TWO  // So cacd se tang len 2
 
-            // Function lock clickFirst
-            setCardInvisible(clickFirst, Constants.MODE_LOCK_CARD)
+            // Lock FIRST CARD (Co flip card)
+            processOpenLockVisibleCard(clickFirst, Constants.MODE_LOCK_CARD)
         }
         // Lan click thu hai
-        else if (Constants.CARD_NUMBER_TWO == cardNumber && !Constants.STR_BLANK.equals(firstCard)) {
+        else if (Constants.CARD_NUMBER_TWO == cardNumber) {
 
             secondCard = strPosition                // Set gia tri can so sanh cho card thu 2
             clickSecond = posCard                   // Set vi tri card thu 2
 
-            // Function lock toan bo card (chua co) => thay the bang lock Second Card
-            // Function Lock secondCard
-            setCardInvisible(clickSecond, Constants.MODE_LOCK_CARD)
-            // Comment chay thu lock all card
-//            processLockAllCard()
+            // Lock Card thu 2 (Co flip card)
+            processOpenLockVisibleCard(clickSecond, Constants.MODE_LOCK_CARD)
 
+            // Lock Toan bo tat ca cac CARD (Khong co FLIP CARD)
+            for (pos in 1..Constants.EASY_NO_OF_CARDS) {
 
-            // Lock or Set Invisible
-            // Hander de tam dung man hinh de flip card
+                processOpenLockVisibleCard(pos, Constants.MODE_LOCK_CARD_NO_FLIP)
+            }
+
+            // Hander de tam dung man hinh de flip card va tinh toan
             Handler().postDelayed({
-                calculate()
+                caculate()
             }, Constants.TIME_HANDLER)
         }
     }
 
-    fun calculate() {
+    // Function kiem tra 2 card giong nhau
+    fun caculate () {
+
+        // Truong hop 2 card giong nhau
         if (firstCard.equals(secondCard)) {
-            // Demo la xoa" khoi man hinh 2 car theo clickFirst va clickSecond
-            // Hien tai se khoa 2 car theo clickFirst va clickSecond
-            setCardInvisible(clickFirst, Constants.MODE_VISIBLE_CARD)
-            setCardInvisible(clickSecond, Constants.MODE_VISIBLE_CARD)
+
+            // Hien tai se khoa 2 card theo clickFirst va clickSecond
+            processOpenLockVisibleCard(clickFirst, Constants.MODE_VISIBLE_CARD)
+            processOpenLockVisibleCard(clickSecond, Constants.MODE_VISIBLE_CARD)
 
             // Add card -> card Visible
             cardsVisible.add(clickFirst)
             cardsVisible.add(clickSecond)
-            turn += 2;
-        } else {
-            // Demo set lai toan bo the img_font
-            // Hien tai se xem set la set lai toan bo hay se lat lai
-            setCardInvisible(clickFirst, Constants.MODE_OPEN_CARD)
-            setCardInvisible(clickSecond, Constants.MODE_OPEN_CARD)
+
+            // Tang luot dem de kiem tra ket thuc game
+            turn+= 2
         }
 
         cardNumber = Constants.CARD_NUMBER_ONE
@@ -367,6 +367,17 @@ class EasyMode : AppCompatActivity() {
         clickFirst = Constants.CLICK_FIRST
         clickSecond = Constants.CLICK_FIRST
 
+        // Mo tat ca card chua duoc add vao cardVisible (Card chua match)
+        for (pos in 1..Constants.EASY_NO_OF_CARDS) {
+            if (!checkCardVisible(pos)) {
+
+                // Demo Function moi
+                processOpenLockVisibleCard(pos, Constants.MODE_OPEN_CARD)
+            }
+        }
+
+        // Kiem tra ket thuc
+        checkEnd()
     }
 
     // Create Alert
@@ -433,258 +444,351 @@ class EasyMode : AppCompatActivity() {
     }
 
 
-    fun processLockCard(
-        easyFlipView: EasyFlipView, mageView_front: ImageView, mageView_back: ImageView,
-        flipTheView: Boolean, isEnabled: Boolean, flipEnabled: Boolean
-    ) {
-        // MODE_OPEN_CARD
-        if (true == flipTheView) {
-            easyFlipView.isFlipEnabled = true
-            easyFlipView.flipTheView()
+    // Kiem tra CARD ton tai trong list Match
+    fun checkCardVisible (positionCurrent : Int) : Boolean{
+        for (pos in 0 .. cardsVisible.size - 1) {
+            if (positionCurrent == cardsVisible.get(pos)) {
+                return true
+            }
         }
-        // MODE_LOCK_CARD
-        if (true == flipTheView && false == isEnabled) {
-            easyFlipView.flipTheView()
-            easyFlipView.isFlipEnabled = flipEnabled
-        }
-        // MODE_VISIBLE_CARD
-        else {
-            mageView_front.isEnabled = isEnabled
-            mageView_back.isEnabled = isEnabled
-            easyFlipView.isFlipEnabled = flipEnabled
+        return false
+    }
+
+    // Kiem tra ket thuc game
+    fun checkEnd () {
+
+        if ((Constants.EASY_NO_OF_CARDS) == turn) {
+            processVisibleAllCard()
         }
     }
 
-    // TWING = TRUE
-    // => Set Card Invisible by position and mode
-    fun setCardInvisible(position: Int, modeCard: Int) {
+    // Function OPEN, LOCK, VISIBLE CARD BY POSITION AND MODE_OPEN, MODE_LOCK, MODE_VISIBLE
+    fun processOpenLockVisibleCard (position: Int, modeCard: Int) {
 
-        var flipEnabled: Boolean = false
-        var isEnabled: Boolean = true
-        var flipTheView: Boolean = true
-
-        if (Constants.MODE_LOCK_CARD == modeCard) {
-            isEnabled = false
-        } else if (Constants.MODE_OPEN_CARD == modeCard) {
-            isEnabled = true
-        } else if (Constants.MODE_VISIBLE_CARD == modeCard) {
-            flipTheView = false
-            isEnabled = false
-        }
-
+        var isEnabled : Boolean = false
         when (position) {
             1 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                // 1 - MODE_OPEN_CARD
+                // 2 - Back Side k duoc hien thi -> easyFlipView.isBackSide = true
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                // 1 - MODE_LOCK_CARD
+                // 2 - Back Side duoc hien thi -> easyFlipView.isBackSide = false
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             2 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back2)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front2)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back2)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front2)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView2)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView2)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
+
             }
             3 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back3)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front3)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back3)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front3)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView3)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView3)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             4 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back4)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front4)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back4)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front4)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView4)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView4)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             5 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back5)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front5)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back5)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front5)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView5)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView5)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             6 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back6)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front6)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back6)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front6)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView6)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView6)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
+
             }
             7 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back7)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front7)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back7)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front7)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView7)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView7)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             8 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back8)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front8)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back8)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front8)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView8)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView8)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             9 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back9)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front9)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back9)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front9)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView9)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView9)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             10 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back10)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front10)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back10)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front10)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView10)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView10)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             11 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back11)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front11)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back11)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front11)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView11)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView11)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
             }
             12 -> {
                 // Lock Card Or Open Card
-                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back12)
-                imageView_back.isEnabled = isEnabled
-                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front12)
-
+                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back12)
+                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front12)
                 // Flip Card
-                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView12)
-                processLockCard(
-                    easyFlipView,
-                    imageView_front,
-                    imageView_back,
-                    flipTheView,
-                    isEnabled,
-                    flipEnabled
-                )
+                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView12)
+
+                // Dieu kien: FLIP CARD - MODE OPEN CARD
+                if (Constants.MODE_OPEN_CARD == modeCard) {
+                    isEnabled = true
+                    if (easyFlipView.isBackSide == true) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+                // Dieu kien: FLIP CARD - MODE LOCK CARD / MODE_VISIBLE_CARD
+                if (Constants.MODE_LOCK_CARD == modeCard) {
+                    if (easyFlipView.isBackSide == false) {
+                        easyFlipView.flipTheView()
+                    }
+                }
+
+                imageView_back.isEnabled = isEnabled
+                imageView_front.isEnabled = isEnabled
+                easyFlipView.isEnabled = isEnabled
+
             }
         }
     }
 
     // Truong hop can lock toan bo card
     // Truong hop ket thuc game, Flip Card
-    fun processLockAllCard() {
-        for (pos in 1..20) {
-            setCardInvisible(pos, Constants.MODE_VISIBLE_CARD)
+    fun processVisibleAllCard () {
+        for (pos in 1 .. Constants.EASY_NO_OF_CARDS) {
+
+            processOpenLockVisibleCard(pos, Constants.MODE_VISIBLE_CARD)
+        }
+    }
+
+    fun processLockAllCard () {
+        for (pos in 1 .. Constants.EASY_NO_OF_CARDS) {
+
+            processOpenLockVisibleCard(pos, Constants.MODE_VISIBLE_CARD)
         }
     }
 

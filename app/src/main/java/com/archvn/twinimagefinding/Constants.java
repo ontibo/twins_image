@@ -17,15 +17,16 @@ public final class Constants {
     public static final int HARD_NO_OF_CARDS = 20;
 
     // TIME HANDLER - FLIP CARD
-    public static final long TIME_HANDLER = 400;
+    public static final long TIME_HANDLER = 300;
 
     // BEGIN FLIP CARD - CHECK CARD
     public static final int CARD_NUMBER_ONE = 1;
     public static final int CARD_NUMBER_TWO = 2;
 
     // MODE (STATUS) CARD
-    // 3 MODE: OPEN - LOCK - VISIBLE
+    // 4 MODE: OPEN - LOCK - VISIBLE - LOCK(NO FLIP)
     public static final int MODE_LOCK_CARD = 0;
+    public static final int MODE_LOCK_CARD_NO_FLIP = 3;
     public static final int MODE_OPEN_CARD = 1;
     public static final int MODE_VISIBLE_CARD = 2;
 
