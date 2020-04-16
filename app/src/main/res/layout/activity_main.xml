@@ -27,7 +27,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="315dp"
-        app:flipDuration="300"
+        app:flipDuration="200"
 
         app:flipOnTouch="true">
 
@@ -68,7 +68,7 @@
         android:layout_marginBottom="315dp"
         android:layout_toEndOf="@+id/easyFlipView"
         android:layout_toRightOf="@+id/easyFlipView"
-        app:flipDuration="300"
+        app:flipDuration="200"
 
         app:flipOnTouch="true">
 
@@ -108,7 +108,7 @@
         android:layout_marginBottom="315dp"
         android:layout_toEndOf="@+id/easyFlipView2"
         android:layout_toRightOf="@+id/easyFlipView2"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -150,7 +150,7 @@
         android:layout_marginBottom="315dp"
         android:layout_toEndOf="@+id/easyFlipView3"
         android:layout_toRightOf="@+id/easyFlipView3"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -192,7 +192,7 @@
         android:layout_marginBottom="315dp"
         android:layout_toEndOf="@+id/easyFlipView4"
         android:layout_toRightOf="@+id/easyFlipView4"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -237,7 +237,7 @@
         android:layout_marginBottom="230dp"
         android:layout_toEndOf="@+id/easyFlipView5"
         android:layout_toRightOf="@+id/easyFlipView5"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -279,7 +279,7 @@
         android:layout_marginBottom="230dp"
         android:layout_toEndOf="@+id/easyFlipView6"
         android:layout_toRightOf="@+id/easyFlipView6"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -321,7 +321,7 @@
         android:layout_marginBottom="230dp"
         android:layout_toEndOf="@+id/easyFlipView7"
         android:layout_toRightOf="@+id/easyFlipView7"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -363,7 +363,7 @@
         android:layout_marginBottom="230dp"
         android:layout_toEndOf="@+id/easyFlipView8"
         android:layout_toRightOf="@+id/easyFlipView8"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -405,7 +405,7 @@
         android:layout_marginBottom="230dp"
         android:layout_toEndOf="@+id/easyFlipView9"
         android:layout_toRightOf="@+id/easyFlipView9"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -448,7 +448,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="185dp"
         android:layout_marginBottom="145dp"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -490,7 +490,7 @@
         android:layout_marginBottom="145dp"
         android:layout_toEndOf="@+id/easyFlipView11"
         android:layout_toRightOf="@+id/easyFlipView11"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -532,7 +532,7 @@
         android:layout_marginBottom="145dp"
         android:layout_toEndOf="@+id/easyFlipView12"
         android:layout_toRightOf="@+id/easyFlipView12"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -574,7 +574,7 @@
         android:layout_marginBottom="145dp"
         android:layout_toEndOf="@+id/easyFlipView8"
         android:layout_toRightOf="@+id/easyFlipView8"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -616,7 +616,7 @@
         android:layout_marginBottom="145dp"
         android:layout_toEndOf="@+id/easyFlipView14"
         android:layout_toRightOf="@+id/easyFlipView14"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -659,7 +659,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="270dp"
         android:layout_marginBottom="60dp"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -701,7 +701,7 @@
         android:layout_marginBottom="60dp"
         android:layout_toEndOf="@+id/easyFlipView16"
         android:layout_toRightOf="@+id/easyFlipView16"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -743,7 +743,7 @@
         android:layout_marginBottom="60dp"
         android:layout_toEndOf="@+id/easyFlipView17"
         android:layout_toRightOf="@+id/easyFlipView17"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -785,7 +785,7 @@
         android:layout_marginBottom="60dp"
         android:layout_toEndOf="@+id/easyFlipView18"
         android:layout_toRightOf="@+id/easyFlipView18"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
@@ -827,7 +827,7 @@
         android:layout_marginBottom="60dp"
         android:layout_toEndOf="@+id/easyFlipView19"
         android:layout_toRightOf="@+id/easyFlipView19"
-        app:flipDuration="300"
+        app:flipDuration="200"
         
         app:flipOnTouch="true">
 
