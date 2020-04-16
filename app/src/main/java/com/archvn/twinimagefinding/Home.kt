@@ -16,8 +16,8 @@ class Home : AppCompatActivity()  {
         var sharedPrefStatus : SharedPreferences = getSharedPreferences("MODE_STATUS",0)
         var sharedPrefScore : SharedPreferences = getSharedPreferences("BEST_TIME",0)
         val editor = sharedPrefStatus.edit()
-        editor.putBoolean("MEDIUM_IS_LOCKED",true)
-        editor.putBoolean("HARD_IS_LOCKED",true)
+        editor.putBoolean("MEDIUM_IS_LOCKED",false)
+        editor.putBoolean("HARD_IS_LOCKED",false)
         editor.commit()
 
         if (!sharedPrefStatus.getBoolean("MEDIUM_IS_LOCKED",false)) {
@@ -32,10 +32,18 @@ class Home : AppCompatActivity()  {
             btnHard.isEnabled= true
         }
 
-
-
         btnEasy.setOnClickListener {
             val intent: Intent = Intent(this@Home, EasyMode::class.java)
+            startActivity(intent)
+        }
+
+        btnMedium.setOnClickListener {
+            val intent: Intent = Intent(this@Home, MediumMode::class.java)
+            startActivity(intent)
+        }
+
+        btnHard.setOnClickListener {
+            val intent: Intent = Intent(this@Home, HardMode::class.java)
             startActivity(intent)
         }
 

@@ -16,9 +16,9 @@ class Leaderboard : AppCompatActivity() {
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.leaderboard)
 
-        easy_mode_score.text = sharedPref.getString(Constants.BEST_HIGH_EASY_MODE,"00:40")
-        medium_mode_score.text = sharedPref.getString(Constants.BEST_HIGH_MEDIUM_MODE,"00:30")
-        hard_mode_score.text = sharedPref.getString(Constants.BEST_HIGH_HARD_MODE,"00:20")
+        easy_mode_score.text = "00:"+ sharedPref.getInt(Constants.BEST_HIGH_EASY_MODE,20).toString()
+        medium_mode_score.text = "00:"+ sharedPref.getInt(Constants.BEST_HIGH_MEDIUM_MODE,45).toString()
+        hard_mode_score.text = "00:"+ sharedPref.getInt(Constants.BEST_HIGH_HARD_MODE,60).toString()
 
     }
 }

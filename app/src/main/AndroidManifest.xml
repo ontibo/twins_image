@@ -27,6 +27,12 @@
             android:name=".EasyMode"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".MediumMode"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".HardMode"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".Leaderboard"
             android:screenOrientation="landscape" />
     </application>
