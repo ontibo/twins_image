@@ -427,26 +427,14 @@ class MediumMode : AppCompatActivity() {
         var pref: SharedPreferences = getSharedPreferences(Constants.BEST_TIME, PRIVATE_MODE)
         var editor = pref.edit()
 
-        var bestEasyScore = pref.getInt(Constants.BEST_HIGH_EASY_MODE, 30)
         var bestMedcore = pref.getInt(Constants.BEST_HIGH_MEDIUM_MODE, 45)
-        var bestHardScore = pref.getInt(Constants.BEST_HIGH_HARD_MODE, 60)
 
         val builder = AlertDialog.Builder(this)
         val dialogView = layoutInflater.inflate(R.layout.result_dialog, null)
         builder.setView(dialogView)
 
         if (b.getString("Data") == "win") {
-            if (Integer.valueOf(b["level"].toString()) === Constants.LEVEL_EASY) {
-                if (Integer.valueOf(b["Time"].toString()) < bestEasyScore) {
-                    editor.putInt(
-                        Constants.BEST_HIGH_EASY_MODE,
-                        Integer.valueOf(b["Time"].toString())
-                    ).apply()
-                    dialogView.findViewById<TextView>(R.id.newhigh).text = "New High Score!"
-                    dialogView.findViewById<TextView>(R.id.newhigh).setTextColor(Color.RED)
-                }
-            } else if (Integer.valueOf(b["level"].toString()) === Constants.LEVEL_MEDIUM){
-                if (Integer.valueOf(b["Time"].toString()) < bestMedcore) {
+            if (Integer.valueOf(b["Time"].toString()) < bestMedcore) {
                     editor.putInt(
                         Constants.BEST_HIGH_MEDIUM_MODE,
                         Integer.valueOf(b["Time"].toString())
@@ -454,16 +442,7 @@ class MediumMode : AppCompatActivity() {
                     dialogView.findViewById<TextView>(R.id.newhigh).text = "New High Score!"
                     dialogView.findViewById<TextView>(R.id.newhigh).setTextColor(Color.RED)
                 }
-            } else if (Integer.valueOf(b["level"].toString()) === Constants.LEVEL_HARD) {
-                if (Integer.valueOf(b["Time"].toString()) < bestHardScore) {
-                    editor.putInt(
-                        Constants.BEST_HIGH_HARD_MODE,
-                        Integer.valueOf(b["Time"].toString())
-                    ).apply()
-                    dialogView.findViewById<TextView>(R.id.newhigh).text = "New High Score!"
-                    dialogView.findViewById<TextView>(R.id.newhigh).setTextColor(Color.RED)
-                }
-            }
+
             dialogView.findViewById<TextView>(R.id.status).text = Constants.MESSAGE_WIN
             dialogView.findViewById<TextView>(R.id.status).setTextColor(Color.BLUE)
             dialogView.findViewById<TextView>(R.id.status).setTextSize(40F)
@@ -472,7 +451,7 @@ class MediumMode : AppCompatActivity() {
         } else {
             dialogView.findViewById<TextView>(R.id.status).text = Constants.MESSAGE_LOSE
             dialogView.findViewById<TextView>(R.id.status).setTextColor(Color.RED)
-            dialogView.findViewById<TextView>(R.id.status).setTextSize(50F)
+            dialogView.findViewById<TextView>(R.id.status).setTextSize(40F)
             dialogView.findViewById<TextView>(R.id.time).text =
                 "Your time: " + formatTime(b["Time"].toString().toInt())
         }

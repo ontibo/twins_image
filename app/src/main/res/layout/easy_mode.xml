@@ -82,7 +82,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row1"
         app:layout_constraintEnd_toEndOf="@id/col1"
@@ -123,7 +122,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row1"
         app:layout_constraintEnd_toEndOf="@id/col2"
@@ -164,7 +162,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row1"
         app:layout_constraintEnd_toEndOf="@id/col3"
@@ -205,7 +202,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row2"
         app:layout_constraintEnd_toEndOf="@id/col1"
@@ -246,7 +242,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row2"
         app:layout_constraintEnd_toEndOf="@id/col2"
@@ -288,7 +283,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row2"
         app:layout_constraintEnd_toEndOf="@id/col3"
@@ -329,7 +323,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row3"
         app:layout_constraintEnd_toEndOf="@id/col1"
@@ -370,7 +363,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row3"
         app:layout_constraintEnd_toEndOf="@id/col2"
@@ -411,7 +403,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row3"
         app:layout_constraintEnd_toEndOf="@id/col3"
@@ -452,7 +443,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row4"
         app:layout_constraintEnd_toEndOf="@id/col1"
@@ -493,7 +483,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row4"
         app:layout_constraintEnd_toEndOf="@id/col2"
@@ -534,7 +523,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:flipDuration="200"
-        
         app:flipOnTouch="true"
         app:layout_constraintBottom_toBottomOf="@id/row4"
         app:layout_constraintEnd_toEndOf="@id/col3"
@@ -561,8 +549,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:text="0"
-        android:textSize="50dp"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="@id/row3"
         app:layout_constraintEnd_toEndOf="@id/col4"
         app:layout_constraintStart_toEndOf="@id/col3"

@@ -99,96 +99,96 @@ class EasyMode : AppCompatActivity() {
 
         /* CARD 1 */
         val img_view_front: ImageView = findViewById<ImageView>(R.id.img_front)
-        img_view_front.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number)
+        img_view_front.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number)
 
             doStuff(1, strPosition.getText().toString())
         }
 
         /* CARD 2 */
         val img_view_front2: ImageView = findViewById<ImageView>(R.id.img_front2)
-        img_view_front2.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number2)
+        img_view_front2.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number2)
 
             doStuff(2, strPosition.getText().toString())
         }
 
         /* CARD 3 */
         val img_view_front3: ImageView = findViewById<ImageView>(R.id.img_front3)
-        img_view_front3.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number3)
+        img_view_front3.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number3)
 
             doStuff(3, strPosition.getText().toString())
         }
 
         /* CARD 4 */
         val img_view_front4: ImageView = findViewById<ImageView>(R.id.img_front4)
-        img_view_front4.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number4)
+        img_view_front4.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number4)
 
             doStuff(4, strPosition.getText().toString())
         }
 
         /* CARD 5 */
         val img_view_front5: ImageView = findViewById<ImageView>(R.id.img_front5)
-        img_view_front5.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number5)
+        img_view_front5.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number5)
 
             doStuff(5, strPosition.getText().toString())
         }
 
         /* CARD 6 */
         val img_view_front6: ImageView = findViewById<ImageView>(R.id.img_front6)
-        img_view_front6.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number6)
+        img_view_front6.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number6)
 
             doStuff(6, strPosition.getText().toString())
         }
 
         /* CARD 7 */
         val img_view_front7: ImageView = findViewById<ImageView>(R.id.img_front7)
-        img_view_front7.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number7)
+        img_view_front7.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number7)
 
             doStuff(7, strPosition.getText().toString())
         }
 
         /* CARD 8 */
         val img_view_front8: ImageView = findViewById<ImageView>(R.id.img_front8)
-        img_view_front8.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number8)
+        img_view_front8.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number8)
 
             doStuff(8, strPosition.getText().toString())
         }
 
         /* CARD 9 */
         val img_view_front9: ImageView = findViewById<ImageView>(R.id.img_front9)
-        img_view_front9.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number9)
+        img_view_front9.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number9)
 
             doStuff(9, strPosition.getText().toString())
         }
 
         /* CARD 10 */
         val img_view_front10: ImageView = findViewById<ImageView>(R.id.img_front10)
-        img_view_front10.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number10)
+        img_view_front10.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number10)
 
             doStuff(10, strPosition.getText().toString())
         }
 
         /* CARD 11 */
         val img_view_front11: ImageView = findViewById<ImageView>(R.id.img_front11)
-        img_view_front11.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number11)
+        img_view_front11.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number11)
 
             doStuff(11, strPosition.getText().toString())
         }
 
         /* CARD 12 */
         val img_view_front12: ImageView = findViewById<ImageView>(R.id.img_front12)
-        img_view_front12.setOnClickListener{
-            var strPosition:TextView = findViewById<TextView>(R.id.tv_number12)
+        img_view_front12.setOnClickListener {
+            var strPosition: TextView = findViewById<TextView>(R.id.tv_number12)
 
             doStuff(12, strPosition.getText().toString())
         }
@@ -233,7 +233,7 @@ class EasyMode : AppCompatActivity() {
                     }
                     // Lock All Card
                     processLockAllCard()
-                    // Notification GAME OVER
+                    // Notification game result
                     b!!.let { createAlertEndGame(it) }
                 }
             }.start()
@@ -286,7 +286,7 @@ class EasyMode : AppCompatActivity() {
                     }
                     // Lock All Card
                     processLockAllCard()
-                    // Notification GAME OVER
+                    // Notification game result
                     b!!.let { createAlertEndGame(it) }
                 }
             }.start()
@@ -344,7 +344,7 @@ class EasyMode : AppCompatActivity() {
     }
 
     // Function kiem tra 2 card giong nhau
-    fun caculate () {
+    fun caculate() {
 
         // Truong hop 2 card giong nhau
         if (firstCard.equals(secondCard)) {
@@ -358,7 +358,7 @@ class EasyMode : AppCompatActivity() {
             cardsVisible.add(clickSecond)
 
             // Tang luot dem de kiem tra ket thuc game
-            turn+= 2
+            turn += 2
         }
 
         cardNumber = Constants.CARD_NUMBER_ONE
@@ -388,42 +388,22 @@ class EasyMode : AppCompatActivity() {
         var editor = pref.edit()
 
         var bestEasyScore = pref.getInt(Constants.BEST_HIGH_EASY_MODE, 30)
-        var bestMedcore = pref.getInt(Constants.BEST_HIGH_MEDIUM_MODE, 45)
-        var bestHardScore = pref.getInt(Constants.BEST_HIGH_HARD_MODE, 60)
 
         val builder = AlertDialog.Builder(this)
         val dialogView = layoutInflater.inflate(R.layout.result_dialog, null)
+        dialogView.fitsSystemWindows
         builder.setView(dialogView)
 
         if (b.getString("Data") == "win") {
-            if (Integer.valueOf(b["level"].toString()) === Constants.LEVEL_EASY) {
-                if (Integer.valueOf(b["Time"].toString()) < bestEasyScore) {
-                    editor.putInt(
-                        Constants.BEST_HIGH_EASY_MODE,
-                        Integer.valueOf(b["Time"].toString())
-                    ).apply()
-                    dialogView.findViewById<TextView>(R.id.newhigh).text = "New High Score!"
-                    dialogView.findViewById<TextView>(R.id.newhigh).setTextColor(Color.RED)
-                }
-            } else if (Integer.valueOf(b["level"].toString()) === Constants.LEVEL_MEDIUM){
-                if (Integer.valueOf(b["Time"].toString()) < bestMedcore) {
-                    editor.putInt(
-                        Constants.BEST_HIGH_MEDIUM_MODE,
-                        Integer.valueOf(b["Time"].toString())
-                    ).apply()
-                    dialogView.findViewById<TextView>(R.id.newhigh).text = "New High Score!"
-                    dialogView.findViewById<TextView>(R.id.newhigh).setTextColor(Color.RED)
-                }
-            } else if (Integer.valueOf(b["level"].toString()) === Constants.LEVEL_HARD) {
-                if (Integer.valueOf(b["Time"].toString()) < bestHardScore) {
-                    editor.putInt(
-                        Constants.BEST_HIGH_HARD_MODE,
-                        Integer.valueOf(b["Time"].toString())
-                    ).apply()
-                    dialogView.findViewById<TextView>(R.id.newhigh).text = "New High Score!"
-                    dialogView.findViewById<TextView>(R.id.newhigh).setTextColor(Color.RED)
-                }
+            if (Integer.valueOf(b["Time"].toString()) < bestEasyScore) {
+                editor.putInt(
+                    Constants.BEST_HIGH_EASY_MODE,
+                    Integer.valueOf(b["Time"].toString())
+                ).apply()
+                dialogView.findViewById<TextView>(R.id.newhigh).text = "New High Score!"
+                dialogView.findViewById<TextView>(R.id.newhigh).setTextColor(Color.RED)
             }
+
             dialogView.findViewById<TextView>(R.id.status).text = Constants.MESSAGE_WIN
             dialogView.findViewById<TextView>(R.id.status).setTextColor(Color.BLUE)
             dialogView.findViewById<TextView>(R.id.status).setTextSize(40F)
@@ -432,7 +412,7 @@ class EasyMode : AppCompatActivity() {
         } else {
             dialogView.findViewById<TextView>(R.id.status).text = Constants.MESSAGE_LOSE
             dialogView.findViewById<TextView>(R.id.status).setTextColor(Color.RED)
-            dialogView.findViewById<TextView>(R.id.status).setTextSize(50F)
+            dialogView.findViewById<TextView>(R.id.status).setTextSize(40F)
             dialogView.findViewById<TextView>(R.id.time).text =
                 "Your time: " + formatTime(b["Time"].toString().toInt())
         }
@@ -445,8 +425,8 @@ class EasyMode : AppCompatActivity() {
 
 
     // Kiem tra CARD ton tai trong list Match
-    fun checkCardVisible (positionCurrent : Int) : Boolean{
-        for (pos in 0 .. cardsVisible.size - 1) {
+    fun checkCardVisible(positionCurrent: Int): Boolean {
+        for (pos in 0..cardsVisible.size - 1) {
             if (positionCurrent == cardsVisible.get(pos)) {
                 return true
             }
@@ -455,7 +435,7 @@ class EasyMode : AppCompatActivity() {
     }
 
     // Kiem tra ket thuc game
-    fun checkEnd () {
+    fun checkEnd() {
 
         if ((Constants.EASY_NO_OF_CARDS) == turn) {
             processVisibleAllCard()
@@ -463,16 +443,16 @@ class EasyMode : AppCompatActivity() {
     }
 
     // Function OPEN, LOCK, VISIBLE CARD BY POSITION AND MODE_OPEN, MODE_LOCK, MODE_VISIBLE
-    fun processOpenLockVisibleCard (position: Int, modeCard: Int) {
+    fun processOpenLockVisibleCard(position: Int, modeCard: Int) {
 
-        var isEnabled : Boolean = false
+        var isEnabled: Boolean = false
         when (position) {
             1 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 // 1 - MODE_OPEN_CARD
@@ -498,10 +478,10 @@ class EasyMode : AppCompatActivity() {
             }
             2 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back2)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front2)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back2)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front2)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView2)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView2)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -524,10 +504,10 @@ class EasyMode : AppCompatActivity() {
             }
             3 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back3)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front3)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back3)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front3)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView3)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView3)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -549,10 +529,10 @@ class EasyMode : AppCompatActivity() {
             }
             4 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back4)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front4)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back4)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front4)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView4)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView4)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -574,10 +554,10 @@ class EasyMode : AppCompatActivity() {
             }
             5 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back5)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front5)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back5)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front5)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView5)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView5)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -599,10 +579,10 @@ class EasyMode : AppCompatActivity() {
             }
             6 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back6)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front6)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back6)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front6)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView6)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView6)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -625,10 +605,10 @@ class EasyMode : AppCompatActivity() {
             }
             7 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back7)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front7)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back7)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front7)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView7)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView7)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -649,10 +629,10 @@ class EasyMode : AppCompatActivity() {
             }
             8 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back8)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front8)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back8)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front8)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView8)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView8)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -674,10 +654,10 @@ class EasyMode : AppCompatActivity() {
             }
             9 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back9)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front9)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back9)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front9)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView9)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView9)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -699,10 +679,10 @@ class EasyMode : AppCompatActivity() {
             }
             10 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back10)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front10)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back10)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front10)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView10)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView10)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -724,10 +704,10 @@ class EasyMode : AppCompatActivity() {
             }
             11 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back11)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front11)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back11)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front11)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView11)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView11)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -749,10 +729,10 @@ class EasyMode : AppCompatActivity() {
             }
             12 -> {
                 // Lock Card Or Open Card
-                var imageView_back : ImageView = findViewById<ImageView>(R.id.img_back12)
-                var imageView_front : ImageView = findViewById<ImageView>(R.id.img_front12)
+                var imageView_back: ImageView = findViewById<ImageView>(R.id.img_back12)
+                var imageView_front: ImageView = findViewById<ImageView>(R.id.img_front12)
                 // Flip Card
-                var easyFlipView : EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView12)
+                var easyFlipView: EasyFlipView = findViewById<EasyFlipView>(R.id.easyFlipView12)
 
                 // Dieu kien: FLIP CARD - MODE OPEN CARD
                 if (Constants.MODE_OPEN_CARD == modeCard) {
@@ -778,15 +758,15 @@ class EasyMode : AppCompatActivity() {
 
     // Truong hop can lock toan bo card
     // Truong hop ket thuc game, Flip Card
-    fun processVisibleAllCard () {
-        for (pos in 1 .. Constants.EASY_NO_OF_CARDS) {
+    fun processVisibleAllCard() {
+        for (pos in 1..Constants.EASY_NO_OF_CARDS) {
 
             processOpenLockVisibleCard(pos, Constants.MODE_VISIBLE_CARD)
         }
     }
 
-    fun processLockAllCard () {
-        for (pos in 1 .. Constants.EASY_NO_OF_CARDS) {
+    fun processLockAllCard() {
+        for (pos in 1..Constants.EASY_NO_OF_CARDS) {
 
             processOpenLockVisibleCard(pos, Constants.MODE_VISIBLE_CARD)
         }
