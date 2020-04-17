@@ -4,6 +4,9 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +17,14 @@ class Home : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         requestedOrientation =  (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.main_menu)
+
+        val fromTop = AnimationUtils.loadAnimation(this,R.anim.from_top)
+        val fromBottom =  AnimationUtils.loadAnimation(this, R.anim.from_bottom)
+
+        findViewById<ImageView>(R.id.imageView).startAnimation(fromTop)
+        findViewById<Button>(R.id.btnEasy).startAnimation(fromBottom)
+        findViewById<Button>(R.id.btnMedium).startAnimation(fromBottom)
+        findViewById<Button>(R.id.btnHard).startAnimation(fromBottom)
 
         var sharedPrefStatus : SharedPreferences = getSharedPreferences("MODE_STATUS",0)
         var sharedPrefScore : SharedPreferences = getSharedPreferences("BEST_TIME",0)
