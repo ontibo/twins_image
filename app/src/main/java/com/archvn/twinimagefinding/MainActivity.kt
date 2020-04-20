@@ -351,7 +351,7 @@ class MainActivity : AppCompatActivity() {
             processVisibleAllCard()
 
             // Save HigtScore
-            val sharedPref: SharedPreferences = getSharedPreferences(Constants.BEST_TIME, PRIVATE_MODE)
+            val sharedPref: SharedPreferences = getSharedPreferences(Constants.PREF_FILE, PRIVATE_MODE)
             sharedPref.edit().putString(Constants.BEST_HIGH_HARD_MODE, higtScore)
             sharedPref.edit().commit()
 

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Twin Image Finding</string>
+    <string name="new_high_score">New High Score!</string>
+    <string name="your_time">Your time:</string>
 </resources>

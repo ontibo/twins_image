@@ -26,7 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.75">
+    </androidx.constraintlayout.widget.Guideline>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/row4"
@@ -70,12 +71,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView"
@@ -110,12 +111,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView2"
@@ -132,8 +133,7 @@
             android:id="@+id/img_back2"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:layout_centerHorizontal="true"
-            />
+            android:layout_centerHorizontal="true" />
 
         <ImageView
             android:id="@+id/img_front2"
@@ -150,12 +150,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView3"
@@ -173,14 +173,14 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front3"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/card_one"/>
+            app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <!--    CARD 4-->
@@ -190,12 +190,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView4"
@@ -213,7 +213,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front4"
@@ -230,12 +230,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView5"
@@ -254,14 +254,14 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front5"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/card_one"/>
+            app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <!--    CARD 6-->
@@ -271,12 +271,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView6"
@@ -311,12 +311,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView7"
@@ -334,14 +334,14 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front7"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/card_one"/>
+            app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <!--    CARD 8-->
@@ -351,12 +351,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView8"
@@ -374,14 +374,14 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front8"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/card_one"/>
+            app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <!--    CARD 9-->
@@ -391,12 +391,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView9"
@@ -414,14 +414,14 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front9"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/card_one"/>
+            app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <!--    CARD 10-->
@@ -431,12 +431,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView10"
@@ -454,7 +454,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front10"
@@ -471,12 +471,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView11"
@@ -511,12 +511,12 @@
         android:layout_height="wrap_content"
         android:gravity="end|top"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/easyFlipView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:id="@+id/easyFlipView12"
@@ -534,7 +534,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/img_front12"
@@ -544,16 +544,27 @@
             app:srcCompat="@drawable/card_one" />
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="40dp"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/row3"
         app:layout_constraintEnd_toEndOf="@id/col4"
         app:layout_constraintStart_toEndOf="@id/col3"
-        app:layout_constraintTop_toBottomOf="@id/row1" />
+        />
 
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@id/row4"
+        app:layout_constraintEnd_toEndOf="@id/col4"
+        app:layout_constraintStart_toEndOf="@id/col3"
+        app:layout_constraintTop_toBottomOf="@id/row3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

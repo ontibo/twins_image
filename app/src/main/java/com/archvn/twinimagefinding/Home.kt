@@ -26,53 +26,53 @@ class Home : AppCompatActivity()  {
         findViewById<Button>(R.id.btnMedium).startAnimation(fromBottom)
         findViewById<Button>(R.id.btnHard).startAnimation(fromBottom)
 
-        var sharedPrefStatus : SharedPreferences = getSharedPreferences("MODE_STATUS",0)
-        var sharedPrefScore : SharedPreferences = getSharedPreferences("BEST_TIME",0)
+        val sharedPrefStatus : SharedPreferences = getSharedPreferences(Constants.PREF_FILE,0)
         val editor = sharedPrefStatus.edit()
-        editor.putBoolean("MEDIUM_IS_LOCKED",false)
-        editor.putBoolean("HARD_IS_LOCKED",false)
-        editor.commit()
+        editor.putBoolean("MEDIUM_IS_UNLOCKED",true)
+        editor.putBoolean("HARD_IS_UNLOCKED",true)
+        editor.apply()
 
-        if (!sharedPrefStatus.getBoolean("MEDIUM_IS_LOCKED",false)) {
+        if (sharedPrefStatus.getBoolean("MEDIUM_IS_UNLOCKED",false)) {
             btnMedium.setBackgroundResource(R.drawable.btn_medium)
             btnMedium.isClickable = true
             btnMedium.isEnabled= true
         }
 
-        if (!sharedPrefStatus.getBoolean("HARD_IS_LOCKED",false)) {
+        if (sharedPrefStatus.getBoolean("HARD_IS_UNLOCKED",false)) {
             btnHard.setBackgroundResource(R.drawable.btn_hard)
             btnHard.isClickable = true
             btnHard.isEnabled= true
         }
 
         btnEasy.setOnClickListener {
-            val intent: Intent = Intent(this@Home, EasyMode::class.java)
+            val intent = Intent(this@Home, EasyMode::class.java)
             startActivity(intent)
         }
 
         btnMedium.setOnClickListener {
-            val intent: Intent = Intent(this@Home, MediumMode::class.java)
+            val intent = Intent(this@Home, MediumMode::class.java)
             startActivity(intent)
         }
 
         btnHard.setOnClickListener {
-            val intent: Intent = Intent(this@Home, HardMode::class.java)
+            val intent = Intent(this@Home, HardMode::class.java)
             startActivity(intent)
         }
 
         btn_leaderboard.setOnClickListener {
-            val intent: Intent = Intent(this@Home, Leaderboard::class.java)
+            val intent = Intent(this@Home, Leaderboard::class.java)
             startActivity(intent)
         }
     }
 
     override fun onBackPressed() {
         val exit = AlertDialog.Builder(this)
+        exit.setCancelable(false)
         exit.setTitle("Do you really want to go?")
         exit.setPositiveButton("Yes, please.")
-            { dialog, which -> finish() }
+            { _, _ -> finish() }
         exit.setNegativeButton("No, I can stay.")
-           { dialog, which ->
+           { _, _ ->
                 Toast.makeText(
                     this@Home,
                     "Welcome back!",

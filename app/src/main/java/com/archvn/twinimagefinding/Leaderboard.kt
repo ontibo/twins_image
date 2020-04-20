@@ -12,7 +12,7 @@ class Leaderboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val sharedPref: SharedPreferences = getSharedPreferences(Constants.BEST_TIME, PRIVATE_MODE)
+        val sharedPref: SharedPreferences = getSharedPreferences(Constants.PREF_FILE, PRIVATE_MODE)
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.leaderboard)
 
