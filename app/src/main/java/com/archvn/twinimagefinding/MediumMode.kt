@@ -292,6 +292,7 @@ class MediumMode : AppCompatActivity() {
             "Quit"
         ) { _, _ ->
             isCancelled = true
+            startActivity(Intent(this,Home::class.java))
             finish()
         }
         pause.show()
@@ -348,6 +349,7 @@ class MediumMode : AppCompatActivity() {
                 "Quit"
             ) { _, _ ->
                 isCancelled = true
+                startActivity(Intent(this,Home::class.java))
                 finish()
             }
             pause.show()
@@ -464,7 +466,12 @@ class MediumMode : AppCompatActivity() {
             dialogView.findViewById<TextView>(R.id.status).textSize = 40F
             dialogView.findViewById<TextView>(R.id.time).text =
                 getString(R.string.your_time) + " " + ActionUtils.formatTime(b["Time"].toString().toInt())
-
+            if (30 >= Integer.valueOf(b["Time"].toString())) {
+                editor.putBoolean(
+                    "HARD_IS_UNLOCKED",
+                    true
+                ).apply()
+            }
         } else {
             dialogView.findViewById<TextView>(R.id.status).text = Constants.MESSAGE_LOSE
             dialogView.findViewById<TextView>(R.id.status).setTextColor(Color.RED)
@@ -473,6 +480,7 @@ class MediumMode : AppCompatActivity() {
                 getString(R.string.your_time) +  " " + ActionUtils.formatTime(b["Time"].toString().toInt())
         }
         builder.setPositiveButton("Close") { _, _ ->
+            startActivity(Intent(this,Home::class.java))
             finish()
         }
         val dialog = builder.create()

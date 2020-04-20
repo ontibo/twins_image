@@ -3,7 +3,6 @@ package com.archvn.twinimagefinding
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.graphics.Color
 import android.os.Bundle
@@ -12,7 +11,6 @@ import android.os.Handler
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.wajahatkarim3.easyflipview.EasyFlipView
 import kotlinx.android.synthetic.main.easy_mode.*
@@ -258,6 +256,7 @@ class EasyMode : AppCompatActivity() {
             "Quit"
         ) { _, _ ->
             isCancelled = true
+            startActivity(Intent(this,Home::class.java))
             finish()
         }
         pause.show()
@@ -315,13 +314,14 @@ class EasyMode : AppCompatActivity() {
                 "Quit"
             ) { _, _ ->
                 isCancelled = true
+                startActivity(Intent(this,Home::class.java))
                 finish()
             }
             pause.show()
         }
     }
 
-    fun shuffle(cards: IntArray, n: Int) {
+    private fun shuffle(cards: IntArray, n: Int) {
         val random = Random()
         for (i in 0 until n) {
             val r: Int = random.nextInt(n - i)
@@ -331,7 +331,7 @@ class EasyMode : AppCompatActivity() {
         }
     }
 
-    fun doStuff(posCard: Int, strPosition: String) {
+    private fun doStuff(posCard: Int, strPosition: String) {
 
         // Lan click dau tien
         if (Constants.CARD_NUMBER_ONE == cardNumber && clickFirst != posCard) {
@@ -365,7 +365,7 @@ class EasyMode : AppCompatActivity() {
     }
 
     // Function kiem tra 2 card giong nhau
-    fun calculate() {
+    private fun calculate() {
 
         // Truong hop 2 card giong nhau
         if (firstCard == secondCard) {
@@ -433,6 +433,12 @@ class EasyMode : AppCompatActivity() {
             dialogView.findViewById<TextView>(R.id.status).textSize = 40F
             dialogView.findViewById<TextView>(R.id.time).text =
                 getString(R.string.your_time) + " " + ActionUtils.formatTime(b["Time"].toString().toInt())
+            if (15 >= Integer.valueOf(b["Time"].toString())) {
+                editor.putBoolean(
+                    "MEDIUM_IS_UNLOCKED",
+                    true
+                ).apply()
+            }
         } else {
             dialogView.findViewById<TextView>(R.id.status).text = Constants.MESSAGE_LOSE
             dialogView.findViewById<TextView>(R.id.status).setTextColor(Color.RED)
@@ -440,7 +446,8 @@ class EasyMode : AppCompatActivity() {
             dialogView.findViewById<TextView>(R.id.time).text =
                 getString(R.string.your_time) + " " + ActionUtils.formatTime(b["Time"].toString().toInt())
         }
-        builder.setPositiveButton("Close") { _, _ ->
+        builder.setNegativeButton("Close") { _, _ ->
+            startActivity(Intent(this,Home::class.java))
             finish()
         }
         val dialog = builder.create()

@@ -27,10 +27,6 @@ class Home : AppCompatActivity()  {
         findViewById<Button>(R.id.btnHard).startAnimation(fromBottom)
 
         val sharedPrefStatus : SharedPreferences = getSharedPreferences(Constants.PREF_FILE,0)
-        val editor = sharedPrefStatus.edit()
-        editor.putBoolean("MEDIUM_IS_UNLOCKED",true)
-        editor.putBoolean("HARD_IS_UNLOCKED",true)
-        editor.apply()
 
         if (sharedPrefStatus.getBoolean("MEDIUM_IS_UNLOCKED",false)) {
             btnMedium.setBackgroundResource(R.drawable.btn_medium)
@@ -47,16 +43,19 @@ class Home : AppCompatActivity()  {
         btnEasy.setOnClickListener {
             val intent = Intent(this@Home, EasyMode::class.java)
             startActivity(intent)
+            finish()
         }
 
         btnMedium.setOnClickListener {
             val intent = Intent(this@Home, MediumMode::class.java)
             startActivity(intent)
+            finish()
         }
 
         btnHard.setOnClickListener {
             val intent = Intent(this@Home, HardMode::class.java)
             startActivity(intent)
+            finish()
         }
 
         btn_leaderboard.setOnClickListener {
