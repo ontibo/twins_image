@@ -256,8 +256,8 @@ class EasyMode : AppCompatActivity() {
             "Quit"
         ) { _, _ ->
             isCancelled = true
-            startActivity(Intent(this,Home::class.java))
             finish()
+            startActivity(Intent(this,Home::class.java))
         }
         pause.show()
     }
@@ -314,8 +314,8 @@ class EasyMode : AppCompatActivity() {
                 "Quit"
             ) { _, _ ->
                 isCancelled = true
-                startActivity(Intent(this,Home::class.java))
                 finish()
+                startActivity(Intent(this,Home::class.java))
             }
             pause.show()
         }
@@ -447,8 +447,8 @@ class EasyMode : AppCompatActivity() {
                 getString(R.string.your_time) + " " + ActionUtils.formatTime(b["Time"].toString().toInt())
         }
         builder.setNegativeButton("Close") { _, _ ->
-            startActivity(Intent(this,Home::class.java))
             finish()
+            startActivity(Intent(this,Home::class.java))
         }
         val dialog = builder.create()
         dialog.show()

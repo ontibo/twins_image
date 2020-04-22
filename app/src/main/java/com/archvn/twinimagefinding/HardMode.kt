@@ -2,6 +2,7 @@ package com.archvn.twinimagefinding
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.graphics.Color
@@ -327,6 +328,7 @@ class HardMode : AppCompatActivity() {
         ) { _, _ ->
             isCancelled = true
             finish()
+            startActivity(Intent(this,Home::class.java))
         }
         pause.show()
     }
@@ -383,6 +385,7 @@ class HardMode : AppCompatActivity() {
             ) { _, _ ->
                 isCancelled = true
                 finish()
+                startActivity(Intent(this,Home::class.java))
             }
             pause.show()
         }
@@ -507,8 +510,9 @@ class HardMode : AppCompatActivity() {
             dialogView.findViewById<TextView>(R.id.time).text =
                 getString(R.string.your_time) + " " + ActionUtils.formatTime(b["Time"].toString().toInt())
         }
-        builder.setPositiveButton("Close") { _, _ ->
+        builder.setNegativeButton("Close") { _, _ ->
             finish()
+            startActivity(Intent(this,Home::class.java))
         }
         val dialog = builder.create()
         dialog.show()
@@ -517,7 +521,7 @@ class HardMode : AppCompatActivity() {
 
     // Kiem tra CARD ton tai trong list Match
     private fun checkCardVisible(positionCurrent: Int): Boolean {
-        for (pos in 0..cardsVisible.size - 1) {
+        for (pos in 0 until cardsVisible.size) {
             if (positionCurrent == cardsVisible.get(pos)) {
                 return true
             }
