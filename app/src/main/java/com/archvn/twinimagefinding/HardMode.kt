@@ -103,7 +103,7 @@ class HardMode : AppCompatActivity() {
             override fun onFinish() {
                 if (turn < (Constants.HARD_NO_OF_CARDS)) {
                     b!!.putString("Data", "lost")
-                    val time: Long = Constants.HARD_TIME - Constants.TIMER_INTERVAL
+                    val time: Long = Constants.HARD_TIME / Constants.TIMER_INTERVAL
                     b!!.putInt("Time", time.toInt())
                     ActionUtils.setProgress(progressBar, progress,Constants.HARD_TIME)
                 }
